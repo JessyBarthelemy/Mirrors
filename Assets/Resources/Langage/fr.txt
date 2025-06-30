@@ -1,0 +1,39 @@
+﻿loading:Chargement
+world:Monde $
+play:JOUER
+settings:PARAMETRES
+remove_ads:SUPPRIMER PUB
+win_message:VICTOIRE
+redo:REFAIRE
+next:SUIVANT
+parameters:PARAMETRES
+sound:Son
+daltonian:Mode daltonien
+validate:VALIDER
+daltonianWarnTitle:Avertissement
+daltonianWarnText:Le mode daltonien prendra effet lors de votre prochaine partie.
+ok:OK
+yes:Oui
+no:Non merci
+premium_error:Erreur lors de l'achat. Veuillez vérifier votre connection internet.
+about:À propos
+contact:Contact
+back:Retour
+vibration:Vibration
+rules:Règle du jeu
+base_rule_1:Le but du jeu est de relier toutes les boules de couleurs en finissant par le cercle de fin.
+base_rule_2:Attention vos mouvements sont aussi effectués dans la zone inférieure en miroir.
+base_rule_3:Vous avez un nombre de coups limité, visible en haut à droite.
+good_luck:Bonne chance !
+rule_multi_color:Les boules multicolores permettent de changer de couleur.
+rule_teleport:Les boules spirales permettent de se téléporter d'une boule à l'autre.
+rule_double:Les niveaux marqués par le symbole inversé sont des niveaux où vos mouvements sont doublements inversés, horizontalement et verticalement.
+all_level_finished:Bravo vous avez fini tous les niveaux !
+follow_us_for_more:Suivez nous sur Facebook pour être au courant lorsqu'il y aura des nouveaux niveaux.
+home:ACCUEIL
+get_hint:Coups supplémentaires
+hint_text:Regardez une vidéo pour obtenir 5 coups suplémentaire pour débloquer le niveau avec une étoile.
+ads_not_finished:Vous avez passé la vidéo. Regardez la en entière pour débloquer 5 déplacements supplémentaires.
+ads_error:Erreur pendant le chargement de la vidéo.
+ads_success:5 déplacements ont été ajoutés.
+facebook:https://www.facebook.com/Mirrors-Jeu-de-r%C3%A9flexion-168090737439510/

@@ -1,0 +1,39 @@
+loading:Loading
+world:World $
+play:PLAY
+settings:SETTINGS
+remove_ads:REMOVE ADS
+win_message:VICTORY
+redo:REDO
+next:NEXT
+parameters:PARAMETERS
+sound:Sound
+daltonian:Daltonian mode
+validate:Validate
+daltonianWarnTitle:Warning
+daltonianWarnText:The daltonian mode will take effect on your next game.
+ok:OK
+yes:Yes
+no:No thanks
+premium_error:Error. Please check your internet connection.
+about:About
+contact:Contact
+back:Back
+vibration:Vibration
+rules: Rules
+base_rule_1:The goal is to connect all the colored dots by finishing with the final circle.
+base_rule_2:Be careful, your movements are also mirrored on the bottom area.
+base_rule_3:You have a limited number of moves, visible on the right corner.
+good_luck:Good luck!
+rule_multi_color:The multicolored dot changes the color of your dot.
+rule_teleport:The spiral dot allows you to teleport yourself on the other spiral dot.
+rule_double:The levels tagged by the inverted symbol are levels where your movements are doubly inverted, horizontally and vertically.
+all_level_finished:Congratulations you have finished all the levels!
+follow_us_for_more:Follow us on Facebook for updates when new levels will be added.
+home:HOME
+get_hint:Get 5 additional moves
+hint_text:Watch a video to obtain 5 more moves to unlock the level with one star.
+ads_not_finished:You have skipped the ads. Watch a full ad to unlock 5 more moves.
+ads_error:Error while playing ads.
+ads_success:5 moves have been added.
+facebook:https://www.facebook.com/Mirrors-Puzzle-game-335523627100089/
