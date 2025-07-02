@@ -10,7 +10,6 @@
         android:largeScreens="true"
         android:xlargeScreens="true"
         android:anyDensity="true"/>
-	  <uses-permission android:name="com.android.vending.BILLING"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:theme="@style/UnityThemeSelector"

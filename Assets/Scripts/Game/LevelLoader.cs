@@ -42,6 +42,7 @@ public class LevelLoader : MonoBehaviour
 
     void InitLevel()
     {
+        Debug.Log("Ceci est un log de test");
         levelText.text = "#" + currentLevel.level;
         moveLeft.text = currentLevel.moveOneStar.ToString();
 

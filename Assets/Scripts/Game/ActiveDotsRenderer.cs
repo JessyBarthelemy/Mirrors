@@ -20,11 +20,8 @@ public class ActiveDotsRenderer : DotsRenderer
     public Image winStarImage;
     public Image endStarImage;
     public GameObject tutorialPanel;
-    public GameObject hintPanel;
-    public Text hintText;
     public Text noButtonText;
     public Text yesButtonText;
-    private Animator hintAnimator;
     public Image stars;
     public Text moveLeftText;
     private int moveLeft;
@@ -37,7 +34,6 @@ public class ActiveDotsRenderer : DotsRenderer
         Tutorial = new Dictionary<int, int>();
         winAnimator = winPanel.GetComponent<Animator>();   
         endAnimator = endGamePanel.GetComponent<Animator>();
-        hintAnimator = hintPanel.GetComponent<Animator>();
         MirroredRenderer = GameObject.Find("BottomGrid").GetComponent<MirroredDotsRenderer>();
         moveLeft = LevelLoader.currentLevel.moveOneStar;
         moveLeftAnimator = moveLeftText.GetComponent<Animator>();
@@ -311,73 +307,4 @@ public class ActiveDotsRenderer : DotsRenderer
             lastVibrationId = last;
         }
     }
-
-    public void ShowHintPanel()
-    {
-        #if UNITY_ANDROID || UNITY_EDITOR
-        Audio.Instance.PlaySound(Sound.Button);
-        hintText.text = LocalizedText.Translate("hint_text");
-        noButtonText.transform.parent.gameObject.SetActive(true);
-        noButtonText.text = LocalizedText.Translate("no");
-        yesButtonText.text = LocalizedText.Translate("yes");
-
-        Button yesButton = yesButtonText.transform.parent.GetComponent<Button>();
-        yesButton.onClick.RemoveAllListeners();
-        yesButton.onClick.AddListener(() => ShowRewardedAd());
-
-        hintPanel.SetActive(true);
-        hintAnimator.SetBool("ShowWin", true);
-        #endif
-    }
-    
-    #if UNITY_ANDROID || UNITY_EDITOR
-    public void ShowRewardedAd()
-    {
-        Audio.Instance.PlaySound(Sound.Button);
-        CloseHintPanel();
-        var options = new ShowOptions { resultCallback = HandleShowResult };
-        Advertisement.Show("rewardedVideo", options);
-    }
-
-    public void CloseHintPanel(bool sound = false)
-    {
-        if(sound)
-            Audio.Instance.PlaySound(Sound.Button);
-        if (hintPanel.activeSelf)
-            hintAnimator.SetBool("ShowWin", false);
-    }
-
-    private void HandleShowResult(ShowResult result)
-    {
-        noButtonText.transform.parent.gameObject.SetActive(false);
-        yesButtonText.text = LocalizedText.Translate("ok");
-
-        Button yesButton = yesButtonText.transform.parent.GetComponent<Button>();
-        yesButton.onClick.RemoveAllListeners();
-        yesButton.onClick.AddListener(() => CloseHintPanel(true));
-
-        switch (result)
-        {
-            case ShowResult.Finished:
-                hintText.text = LocalizedText.Translate("ads_success");
-                hintPanel.SetActive(true);
-                hintAnimator.SetBool("ShowWin", true);
-
-                moveLeft += 5;
-                adsShown = true;
-                UpdateMoveLeft();
-                break;
-            case ShowResult.Skipped:
-                hintText.text = LocalizedText.Translate("ads_not_finished");
-                hintPanel.SetActive(true);
-                hintAnimator.SetBool("ShowWin", true);
-                break;
-            case ShowResult.Failed:
-                hintText.text = LocalizedText.Translate("ads_error");
-                hintPanel.SetActive(true);
-                hintAnimator.SetBool("ShowWin", true);
-                break;
-        }
-    }
-    #endif
 }
